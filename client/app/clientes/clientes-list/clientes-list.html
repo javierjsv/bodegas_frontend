@@ -1,0 +1,25 @@
+<section class="container" ng-cloak="">
+
+	<div>This is the clientes-list view.</div>
+
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Apellidos</th>
+				<th>Cargo</th>
+				<th>Email</th>
+				<th>Acción</th>
+				<th>nombreEmpresa</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in vm.clientes">
+				<td>{{item.cargo}}</td>
+				<td>{{item.apellidos}}</td>
+				<td>{{item.correoElectronico}}</td>
+				<td>{{item.nombreEmpresa}}</td>
+				<td><a class="btn btn-primary" ui-sref="clientes-update({idClientes:item.id})">Editar</a></td>
+			</tr>
+		</tbody>
+	</table>
+</section>
